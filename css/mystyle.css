@@ -18,15 +18,17 @@ body {
 }
 
 .navbar {
-    background-color: #fcefe5;
+    /*background-color: #fcefe5;*/
+    background-color: rgb(252, 239, 229, 0.95);
     position: fixed;
     top: 0;
     width: 100%;
-    height: 10em;
+    height: 7em;
 }
 
 .topnav {
     background-color: #c49b99;
+    box-shadow: 0px 10px 5px rgb(128, 128, 128, 0.6);
     text-align: center;
     position: fixed;
     top: 0;
@@ -35,6 +37,16 @@ body {
     margin-top: 2em;
     margin-bottom: 2em;
     padding-top: 0.2em;
+}
+
+.navframe {
+    position: fixed;
+    width: 100%;
+    height: 4.6em;
+    border-top: 4px dotted white;
+    border-bottom: 4px dotted white;
+    padding-left: 20%;
+    padding-right: 20%;
 }
 
 .navframe a {
@@ -48,16 +60,6 @@ body {
 
 .topnav a:hover {
     color: #fff;
-}
-
-.navframe {
-    position: fixed;
-    width: 100%;
-    height: 4.6em;
-    border-top: 4px dotted white;
-    border-bottom: 4px dotted white;
-    padding-left: 20%;
-    padding-right: 20%;
 }
 
 /* Menu icon */
@@ -75,7 +77,8 @@ body {
 .bar3 {
     width: 35px;
     height: 5px;
-    background-color: #fcefe5;;
+    background-color: #fcefe5;
+    ;
     margin: 6px 0;
     transition: 0.2s;
 }
@@ -130,18 +133,19 @@ body {
 
 .mobilenav {
     height: 0%;
-    width: 88%;
+    width: 100%;
     position: fixed;
-    top: 23%;
-    left: 6%;
-    background-color: #c49b99;
+    top: 13.5%;
+    background-color: rgb(196, 155, 153, 0.9);
     overflow-y: hidden;
     transition: 0.4s;
-    border-radius: 10%;
     display: grid;
-    justify-content: center;
+    justify-content: left;
     align-content: center;
     gap: 20px;
+    z-index: -2;
+    padding-left: 5%;
+    padding-bottom: 0.5em;
 }
 
 .mobilenav a {
@@ -157,8 +161,29 @@ main {
     background-color: #fff;
     height: 100em;
     color: black;
-    text-align: center;
+    text-align: center; 
     padding-top: 3em;
+}
+
+.headings {
+    font-size: 25px;
+}
+
+.main_img {
+    width: 50%;
+}
+
+.info-box {
+    width: 75%;
+    height: 15%;
+    display: inline-block;
+    background-color: rgb(252, 239, 229);
+    border: 1px solid black;
+    margin-top: -5em;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
 @media screen and (max-width: 1200px) {
@@ -185,5 +210,15 @@ main {
     main {
         margin-left: 5%;
         margin-right: 5%;
+    }
+
+    .headings {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .main_img {
+        width: 100%;
     }
 }
