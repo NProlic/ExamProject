@@ -11,7 +11,8 @@
     <link href="http://fonts.cdnfonts.com/css/hanken" rel="stylesheet">
     <!--Font-->
     <link href="http://fonts.cdnfonts.com/css/alire" rel="stylesheet">
-    
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css" rel="stylesheet">
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js"></script>
 </head>
 
 <body>
@@ -39,21 +40,228 @@
                 <a href="#"><h3>FIND US</h3></a>
         </div>
     </header>
+    
+    <!-- MAIN -->
     <main>
-        <div class="headings">
-        <h2>Delicious &amp; Handmade</h2><br><br>
-        <h1>CHIMNEY CAKES</h1><br><br>
-        <h2>in AARHUS</h2><br></div>
+        <!-- TOP IMAGE -->
+        <section class="hero-image">
+            <div class="headings">
+                <h2>Delicious &amp; Handmade</h2><br><br>
+                <h1>~ CHIMNEY CAKES ~</h1><br><br>
+                <h2>in AARHUS</h2><br>
+            </div>
+        </section>
         
-        <img src="media/croppedflora.jpg" class="main_img">
-        
-        <div class="info-box">
-            <h3>Cili's Bakery</h3><br>
-            <p>We want to do what we do best and that's <strong>chimney cakes</strong>. You can find us at Café Mellemfolk, located in the heart of Aarhus. At Cili's it is important for us that you </p>
+        <!-- FIRST IMG+TEXT SECTION -->
+        <div class="new-main">
+            <section class="pic-txt left-section">
+                <img src="media/traditional1.jpg" class="main_img">
+                <div class="info-box">
+                    <h3>Cili's Bakery</h3><br>
+                    <p>We want to do what we do best, and that's <strong>chimney cakes</strong>. You can find us at Café Mellemfolk, located in the heart of Aarhus. At Cili's it is important for us that you </p>
+                </div>
+            </section>
+
+            <!-- INFO CIRCLES -->
+            <section class="flex-container">
+                <div class="flex-item"><img src="media/handmade.jpg" class="flex-img"><h3>HANDMADE</h3></div>
+                <div class="flex-item"><img src="media/traditional.jpg" class="flex-img"><h3>TRADITIONAL</h3></div>
+                <div class="flex-item"><img src="media/mellemfolk.jpg" class="flex-img"><h3>LOCAL</h3></div>
+            </section>
+
+            <!-- SECOND IMG+TEXT SECTION -->
+            <section class="pic-txt right-section">
+                <img src="media/croppedcake.jpg" class="main_img">
+                <div class="info-box">
+                    <h3>Chimney Cake</h3><br>
+                    <p>The owner <strong>Murányi Flóra</strong> loves to show her passion for baking delicious handmade chimney cakes. Her passion for baking stems from her Hungarian roots. Murányi creates pastry with ease while having fun and remaining young and vibrant.</p>
+                </div>
+            </section>
+
+            <!-- GALLERY -->
+            <section class="gallery-section">
+                <div class="gallery-container">
+                    <div class="gallery-image">
+                        <img id="myImg1" src="media/IMG_0622.jpg" alt="Chimney cake" style="height:100%;max-height:300px">
+
+                        <!-- The Modal -->
+                        <div id="myModal1" class="modal">
+
+                          <!-- The Close Button -->
+                          <span class="close">&times;</span>
+
+                          <!-- Modal Content (The Image) -->
+                          <img class="modal-content" id="img01">
+
+                          <!-- Modal Caption (Image Text) -->
+                          <div id="caption1"></div>
+                        </div>
+                    </div>
+                    <div class="gallery-image">
+                        <img id="myImg2" src="media/IMG_0623.jpg" alt="Chimney cake" style="height:100%;max-height:300px">
+
+                        <!-- The Modal -->
+                        <div id="myModal2" class="modal">
+
+                          <!-- The Close Button -->
+                          <span class="close" id="close2">&times;</span>
+
+                          <!-- Modal Content (The Image) -->
+                          <img class="modal-content" id="img02">
+
+                          <!-- Modal Caption (Image Text) -->
+                          <div id="caption2"></div>
+                        </div>
+                    </div>
+                    <div class="gallery-image">
+                        <img id="myImg3" src="media/IMG_0582.jpg" alt="Chimney cake" style="height:100%;max-height:300px">
+
+                        <!-- The Modal -->
+                        <div id="myModal3" class="modal">
+
+                          <!-- The Close Button -->
+                          <span class="close" id="close3">&times;</span>
+
+                          <!-- Modal Content (The Image) -->
+                          <img class="modal-content" id="img03">
+
+                          <!-- Modal Caption (Image Text) -->
+                          <div id="caption3"></div>
+                        </div>
+                    </div>
+                    <div class="gallery-image">
+                        <img id="myImg4" src="media/traditional.jpg" alt="Chimney cake" style="height:100%;max-height:300px">
+
+                        <!-- The Modal -->
+                        <div id="myModal4" class="modal">
+
+                          <!-- The Close Button -->
+                          <span class="close" id="close4">&times;</span>
+
+                          <!-- Modal Content (The Image) -->
+                          <img class="modal-content" id="img04">
+
+                          <!-- Modal Caption (Image Text) -->
+                          <div id="caption4"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- REVIEWES -->
+
+            <section class="flex-container">
+                <div class="flex-item"><img src="media/caroline.jpg" class="flex-img"><br><h3>Caroline</h3><i>Review</i><br><q>The best chimney cake ever!</q></div>
+                <div class="flex-item"><img src="media/sebastian.jpg" class="flex-img"><br><h3>Sebastian</h3><i>Review</i><br><q>Do yourself a favour and get a chimney cake here.</q></div>
+                <div class="flex-item"><img src="media/david.jpg" class="flex-img"><br><h3>David</h3><i>Review</i><br><q>I'll definitely come back!</q></div>
+            </section>
+
+            <!-- MAP & VIDEO -->
+
+            <div class="mapvid-container">
+                <div id="map" class="mv-item"></div>
+                <div id="video">
+                    <video width="50%" height="" controls class="mv-item">
+                        <source src="media/cc_elott.mp4" type="video/mp4">Your browser does not support playing videos.</video>
+                </div>
+            </div>
+
         </div>
     </main>
-      
-    <footer></footer>
+    
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div clas="footer-left">
+            <img class="logo2" src="media/logo.png">
+        </div>
+        
+        <div clas="footer-center">
+            <ul class="contact-list">
+                <li>
+                    <img src="media/mapicon.png" alt="Map icon" class="some_image some">
+                    <p class="paragraph">Mejlgade 53, Aarhus C</p>
+                </li>
+                <li>
+                    <img src="media/phoneicon.png" alt="Phone icon" class="some_image some">
+                    <p class="paragraph">+45 123456789</p>
+                </li>
+                <li>
+                    <img src="media/maillogo.png" alt="Mail icon" class="some_image some">
+                    <p class="paragraph">cilisbakery@gmail.com</p>
+                </li>
+            </ul>
+        </div>
+        
+        <div clas="footer-right">
+            <h3>About the company</h3><br>
+            <p>
+                We want to do what we do best, and that's <strong>chimney cakes</strong>. You can find us at Café Mellemfolk, located in the heart of Aarhus.
+            </p>
+            <div class="footer-icons">
+                <a href="https://www.facebook.com/Cilis-103290887958792"><img src="media/facebooklogo.png" alt="Facebook logo" class="some_image"></a>
+                <a href="https://www.instagram.com/cilis53/"><img src="media/instalogo.png" alt="Instagram logo" class="some_image"></a>
+                <a href="#"><img src="media/ytlogo.png" alt="Youtube logo" class="some_image"></a>
+            </div>
+        </div>
+    
+    </footer>
     
     <script src="js/js.js"></script>
+    <script>
+        mapboxgl.accessToken = 'pk.eyJ1IjoidHdlbnl0d2VsdmUiLCJhIjoiY2tucmJqMHM1MGU5aTJ2bzc4c2Jmc2t1OSJ9.TBYAURDvqarW56GRuP6xpg';
+        var map = new mapboxgl.Map({
+            container: 'map',
+            style: 'mapbox://styles/twenytwelve/ckr6tfb2l116t18t2rx16oz8k',
+            center: [10.21, 56.159, 10.21],
+            zoom: 12.4
+        });
+
+        map.on('load', function () {
+            // Add an image to use as a custom marker
+            map.loadImage(
+                'https://docs.mapbox.com/mapbox-gl-js/assets/custom_marker.png',
+                function (error, image) {
+                    if (error) throw error;
+                    map.addImage('custom-marker', image);
+                    // Add a GeoJSON source
+                    map.addSource('points', {
+                        'type': 'geojson',
+                        'data': {
+                                'type': 'FeatureCollection',
+                                'features': [
+                                {
+                                    // feature for MellemFolk
+                                    'type': 'Feature',
+                                    'geometry': {
+                                    'type': 'Point',
+                                    'coordinates': [10.2128655, 56.15996,10.213]
+                                    },
+                                    'properties': {
+                                        'title': 'MellemFolk'
+                                    }
+                                }
+                            ]
+                        }
+                    });
+
+                    // Add a symbol layer
+                    map.addLayer({
+                        'id': 'points',
+                        'type': 'symbol',
+                        'source': 'points',
+                        'layout': {
+                            'icon-image': 'cafe-15', //custom-marker//
+                            // get the title name from the source's "title" property
+                            'text-field': ['get', 'title'],
+                            'text-font': [
+                            'Open Sans Semibold'
+                            ],
+                            'text-offset': [0, 0.5],
+                            'text-anchor': 'top'
+                        }
+                    });
+                }
+            );
+        });
+</script>
 </body></html>
