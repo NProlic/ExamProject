@@ -19,11 +19,11 @@
     <header class="navbar">
         <div class="topnav">
             <div class="navframe">
-                <a href="#" class="navleft"><h3>Product</h3></a>
-                <a href="#" class="navleft"><h3>About me</h3></a>
-                <a href="#" class="navcenter"><img class="logo" src="media/logo.png"></a>
-                <a href="#" class="navright"><h3>Contact</h3></a>
-                <a href="#" class="navright"><h3>Find us</h3></a>
+                <a href="#aboutme" class="navleft"><h3>About me</h3></a>
+                <a href="#product" class="navleft"><h3>Product</h3></a>
+                <a href="index.html" class="navcenter"><img class="logo" src="media/logo.png"></a>
+                <a href="#contact" class="navright"><h3>Contact</h3></a>
+                <a href="#findus" class="navright"><h3>Find us</h3></a>
                 <!--Menu icon-->
                 <label for="menu_icon" class="icon_container" onclick="iconTransform(this);openNav();">
                 <div class="bar1"></div>
@@ -34,15 +34,15 @@
             </div>
         </div>
         <div id="mobile" class="mobilenav">
-                <br><a href="#"><h3>PRODUCT</h3></a>
-                <a href="#"><h3>ABOUT ME</h3></a>
-                <a href="#"><h3>CONTACT</h3></a>
-                <a href="#"><h3>FIND US</h3></a>
+                <br><a href="#aboutme"><h3>ABOUT ME</h3></a>
+                <a href="#product"><h3>PRODUCT</h3></a>
+                <a href="#map"><h3>FIND US</h3></a>
+                <a href="#contact"><h3>CONTACT</h3></a>
         </div>
     </header>
     
     <!-- MAIN -->
-    <main>
+    <main id="home">
         <!-- TOP IMAGE -->
         <section class="hero-image">
             <div class="headings">
@@ -52,12 +52,13 @@
             </div>
         </section>
         
-        <!-- FIRST IMG+TEXT SECTION -->
         <div class="new-main">
-            <section class="pic-txt left-section">
+            <!-- FIRST IMG+TEXT SECTION -->
+            <div class="links" id="aboutme"></div>
+            <section class="pic-txt left-section" id="aboutme">
                 <img src="media/traditional1.jpg" class="main_img">
                 <div class="info-box">
-                    <h3>Cili's Bakery</h3><br>
+                    <h3>&nbsp;Cili's Bakery</h3><br>
                     <p>We want to do what we do best, and that's <strong>chimney cakes</strong>. You can find us at Café Mellemfolk, located in the heart of Aarhus. At Cili's it is important for us that you </p>
                 </div>
             </section>
@@ -70,10 +71,11 @@
             </section>
 
             <!-- SECOND IMG+TEXT SECTION -->
-            <section class="pic-txt right-section">
+            <div class="links" id="product"></div>
+            <section class="pic-txt right-section" id="product">
                 <img src="media/croppedcake.jpg" class="main_img">
                 <div class="info-box">
-                    <h3>Chimney Cake</h3><br>
+                    <h3>&nbsp;Chimney Cake</h3><br>
                     <p>The owner <strong>Murányi Flóra</strong> loves to show her passion for baking delicious handmade chimney cakes. Her passion for baking stems from her Hungarian roots. Murányi creates pastry with ease while having fun and remaining young and vibrant.</p>
                 </div>
             </section>
@@ -88,7 +90,7 @@
                         <div id="myModal1" class="modal">
 
                           <!-- The Close Button -->
-                          <span class="close">&times;</span>
+                          <span class="close1">&times;</span>
 
                           <!-- Modal Content (The Image) -->
                           <img class="modal-content" id="img01">
@@ -104,7 +106,7 @@
                         <div id="myModal2" class="modal">
 
                           <!-- The Close Button -->
-                          <span class="close" id="close2">&times;</span>
+                          <span class="close2" id="close2">&times;</span>
 
                           <!-- Modal Content (The Image) -->
                           <img class="modal-content" id="img02">
@@ -120,7 +122,7 @@
                         <div id="myModal3" class="modal">
 
                           <!-- The Close Button -->
-                          <span class="close" id="close3">&times;</span>
+                          <span class="close3" id="close3">&times;</span>
 
                           <!-- Modal Content (The Image) -->
                           <img class="modal-content" id="img03">
@@ -136,7 +138,7 @@
                         <div id="myModal4" class="modal">
 
                           <!-- The Close Button -->
-                          <span class="close" id="close4">&times;</span>
+                          <span class="close4" id="close4">&times;</span>
 
                           <!-- Modal Content (The Image) -->
                           <img class="modal-content" id="img04">
@@ -157,12 +159,17 @@
             </section>
 
             <!-- MAP & VIDEO -->
-
+            
+            <div class="links" id="findus"></div>
+            <h3 style="font-size: 23px;">&nbsp;&nbsp;Where are we?</h3>
             <div class="mapvid-container">
-                <div id="map" class="mv-item"></div>
-                <div id="video">
-                    <video width="50%" height="" controls class="mv-item">
-                        <source src="media/cc_elott.mp4" type="video/mp4">Your browser does not support playing videos.</video>
+                <div class="mapvid-item map">
+                    <div id="map"></div>
+                </div>
+                <div class="mapvid-item video">
+                    <video controls>
+                        <source src="media/cc_elott.mp4" type="video/mp4">Your browser does not support playing videos.
+                    </video>
                 </div>
             </div>
 
@@ -170,7 +177,7 @@
     </main>
     
     <!-- FOOTER -->
-    <footer class="footer">
+    <footer class="footer" id="contact">
         <div clas="footer-left">
             <img class="logo2" src="media/logo.png">
         </div>

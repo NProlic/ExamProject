@@ -17,6 +17,33 @@ body {
     background-color: #fcefe5;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+.links {
+    position: relative;
+    height: 3em;
+    width: 3em;
+    background-color: lightgreen;
+    visibility: hidden;
+}
+
+#aboutme {
+    top: -5.5em;
+    z-index: 4;
+}
+
+#product {
+    top: -5.5em;
+    z-index: 4;
+}
+
+#findus {
+    top: -5.5em;
+    z-index: 4;
+}
+
 .navbar {
     /*background-color: #fcefe5;*/
     background-color: rgb(252, 239, 229, 0.95);
@@ -79,7 +106,6 @@ body {
     width: 35px;
     height: 5px;
     background-color: #fcefe5;
-    ;
     margin: 6px 0;
     transition: 0.2s;
 }
@@ -244,6 +270,7 @@ main {
     flex-wrap: nowrap;
     margin: 1em;
     border: 1px solid #886758;
+    box-shadow: inset -10px 0px 10px rgb(128, 128, 128, 0.6);
     padding: 1em;
     overflow-x: auto;
 }
@@ -251,6 +278,7 @@ main {
 .gallery-image {
     flex: 1 1 auto;
     cursor: pointer;
+    margin: 0.5em;
 }
 
 /* Style the Image Used to Trigger the Modal */
@@ -266,7 +294,7 @@ main {
 .modal {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
+  z-index: 4; /* Sit on top */
   padding-top: 100px; /* Location of the box */
   left: 0;
   top: 0;
@@ -281,8 +309,8 @@ main {
 .modal-content {
   margin: auto;
   display: block;
-  width: 80%;
-  max-width: 700px;
+  height: 80%;
+  max-height: 500px;
 }
 
 /* Caption of Modal Image (Image Text) - Same Width as the Image */
@@ -309,7 +337,7 @@ main {
 }
 
 /* The Close Button */
-.close {
+.close1, .close2, .close3, .close4 {
   position: absolute;
   top: 15px;
   right: 35px;
@@ -336,26 +364,33 @@ main {
 /* MAP & VIDEO */
 
 .mapvid-container {
-    /*display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;*/
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    border: 1px dotted #886758;
+    border-radius: 5px;
 }
 
-.mv-item {
-    /*flex: 1 1 auto;
-    text-align: center;*/
+.mapvid-item {
+    flex: 0 1 auto;
+    padding: 1em;
 }
 
 #map { 
-    width: 50%;
+    max-width: 20em;
+    width: 38vw;
     height: 30em;
     z-index: 1;
-    border-radius: 0 15%;
-    display: inline-block;
+    margin-right: 1em;
 }
 
-#video {
-    display: inline-block;
+.video {
+    text-align: center;
+}
+
+video {
+    width: 640px;
 }
 
 /* FOOTER */
@@ -403,6 +438,17 @@ main {
     margin: 0;
 }
 
+@media screen and (max-width: 1477px) {
+    .mapvid-container {
+        flex-direction: column;
+    }
+    
+    #map {
+        max-width: 100em;   
+        width: 100%;
+    }
+}
+
 /* Mobile version */
 @media screen and (max-width: 1200px) {
     .navframe {
@@ -433,6 +479,24 @@ main {
         width: 90%;
     }
     
+    .gallery-container {
+        width: 100%;
+        margin-left: 0;
+    }
+    
+    .mapvid-container {
+        flex-direction: column;
+    }
+    
+    #map {
+        max-width: 100em;   
+        width: 100%;
+    }
+    
+    .mapvid-item video {
+        width: 640px;
+    }
+    
     .footer {
         padding-right: 5%;
     }
@@ -443,6 +507,26 @@ main {
         padding-left: 5%;
         flex-direction: column-reverse;
         text-align: center;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .map {
+        width: 100%;
+    }
+    
+    .mapvid-item video {
+        width: 500px;
+    }
+}
+
+@media screen and (max-height: 700px) {
+    .contact-list li {
+        width: 50px;
+    }
+    
+    .video {
+        width: 380px;
     }
 }
 
@@ -464,6 +548,22 @@ main {
         font-size: 20px;
     }
     
+    .mapvid-container {
+        border: none;
+    }
+    
+    .mapvid-item video {
+        position: relative;
+        width: 90vw;
+        top: 0;
+        left: -17%;
+    }
+    
+    #findus {
+        top: -10.5em;
+        z-index: 4;
+    }
+    
     .footer {
         padding-left: 5%;
         flex-direction: column-reverse;
@@ -472,19 +572,5 @@ main {
     
     .contact-list li {
         width: 100px;
-    }
-    
-    #map {
-        width: 100%;
-    }
-    
-    #video {
-        width: 100%;
-    }
-}
-
-@media screen and (max-height: 700px) {
-    .contact-list li {
-        width: 50px;
     }
 }
