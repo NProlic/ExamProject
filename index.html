@@ -9,8 +9,7 @@
     <link rel="stylesheet" href="css/mystyle.css">
     <!--Font-->
     <link href="http://fonts.cdnfonts.com/css/hanken" rel="stylesheet">
-    <!--Font-->
-    <link href="http://fonts.cdnfonts.com/css/alire" rel="stylesheet">
+    <!--Mapbox-->
     <link href="https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css" rel="stylesheet">
     <script src="https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js"></script>
 </head>
@@ -21,7 +20,7 @@
             <div class="navframe">
                 <a href="#aboutme" class="navleft"><h3>About me</h3></a>
                 <a href="#product" class="navleft"><h3>Product</h3></a>
-                <a href="index.html" class="navcenter"><img class="logo" src="media/logo.png"></a>
+                <a href="index.html" class="navcenter"><img class="logo" src="media/logo.png" alt="logo"></a>
                 <a href="#contact" class="navright"><h3>Contact</h3></a>
                 <a href="#findus" class="navright"><h3>Find us</h3></a>
                 <!--Menu icon-->
@@ -56,27 +55,27 @@
             <!-- FIRST IMG+TEXT SECTION -->
             <div class="links" id="aboutme"></div>
             <section class="pic-txt left-section" id="aboutme">
-                <img src="media/traditional1.jpg" class="main_img">
+                <img src="media/traditional1.jpg" class="main_img" alt="messy table with baking material">
                 <div class="info-box">
-                    <h3>&nbsp;Cili's Bakery</h3><br>
-                    <p>We want to do what we do best, and that's <strong>chimney cakes</strong>. You can find us at Café Mellemfolk, located in the heart of Aarhus. At Cili's it is important for us that you </p>
+                    <h3>Cili's Bakery</h3><br>
+                    <p>Meet Cili's owner, <strong>Murányi Flóra</strong>! Murányi bakes delicious pastry with ease and a smile on her face. Her passion for baking stems from her Hungarian roots. She particularly likes following old recepies and making traditional pasrty from her homeland.</p>
                 </div>
             </section>
 
             <!-- INFO CIRCLES -->
             <section class="flex-container">
-                <div class="flex-item"><img src="media/handmade.jpg" class="flex-img"><h3>HANDMADE</h3></div>
-                <div class="flex-item"><img src="media/traditional.jpg" class="flex-img"><h3>TRADITIONAL</h3></div>
-                <div class="flex-item"><img src="media/mellemfolk.jpg" class="flex-img"><h3>LOCAL</h3></div>
+                <div class="flex-item"><img src="media/handmade.jpg" class="flex-img" alt="handmade cake"><h3>HANDMADE</h3></div>
+                <div class="flex-item"><img src="media/traditional.jpg" class="flex-img" alt="traditional cake"><h3>TRADITIONAL</h3></div>
+                <div class="flex-item"><img src="media/mellemfolk.jpg" class="flex-img" alt="mellemfolk caffe"><h3>LOCAL</h3></div>
             </section>
 
             <!-- SECOND IMG+TEXT SECTION -->
             <div class="links" id="product"></div>
             <section class="pic-txt right-section" id="product">
-                <img src="media/croppedcake.jpg" class="main_img">
+                <img src="media/croppedcake.jpg" class="main_img" alt="chimney cake">
                 <div class="info-box">
-                    <h3>&nbsp;Chimney Cake</h3><br>
-                    <p>The owner <strong>Murányi Flóra</strong> loves to show her passion for baking delicious handmade chimney cakes. Her passion for baking stems from her Hungarian roots. Murányi creates pastry with ease while having fun and remaining young and vibrant.</p>
+                    <h3>Chimney Cake</h3><br>
+                    <p>Flóra will bake for you what she does best, and that's <strong>chimney cakes</strong>. A chimney cake is a special type of cake originally made in Hungary and its surrounding countries. It has a cuirous and unique shape for which it owns its name - chimney cake.<br><br> You can eat your chimney cake empty or filled with Nutella, ice cream, whipped cream... you get the idea :)</p>
                 </div>
             </section>
 
@@ -153,25 +152,30 @@
             <!-- REVIEWES -->
 
             <section class="flex-container">
-                <div class="flex-item"><img src="media/caroline.jpg" class="flex-img"><br><h3>Caroline</h3><i>Review</i><br><q>The best chimney cake ever!</q></div>
-                <div class="flex-item"><img src="media/sebastian.jpg" class="flex-img"><br><h3>Sebastian</h3><i>Review</i><br><q>Do yourself a favour and get a chimney cake here.</q></div>
-                <div class="flex-item"><img src="media/david.jpg" class="flex-img"><br><h3>David</h3><i>Review</i><br><q>I'll definitely come back!</q></div>
+                <div class="flex-item"><img src="media/caroline.jpg" class="flex-img" alt="first person"><br><h3>Caroline</h3><i>Review</i><br><q>The best chimney cake ever!</q></div>
+                <div class="flex-item"><img src="media/sebastian.jpg" class="flex-img" alt="second person"><br><h3>Sebastian</h3><i>Review</i><br><q>Do yourself a favour and get a chimney cake here.</q></div>
+                <div class="flex-item"><img src="media/david.jpg" class="flex-img" alt="third person"><br><h3>David</h3><i>Review</i><br><q>I'll definitely come back!</q></div>
             </section>
 
             <!-- MAP & VIDEO -->
             
             <div class="links" id="findus"></div>
-            <h3 style="font-size: 23px;">&nbsp;&nbsp;Where are we?</h3>
-            <div class="mapvid-container">
-                <div class="mapvid-item map">
-                    <div id="map"></div>
-                </div>
-                <div class="mapvid-item video">
-                    <video controls>
-                        <source src="media/cc_elott.mp4" type="video/mp4">Your browser does not support playing videos.
-                    </video>
+            <section>
+            <h3 style="font-size: 23px; margin-left: 2em;">Where can I get my chimney cake?</h3>
+            <div class="container">
+                <br><p>You can find your chimney cake at Café Mellemfolk, located in the heart of Aarhus.</p>
+                <div class="mapvid-container">
+                    <div class="mapvid-item map">
+                        <div id="map"></div>
+                    </div>
+                    <div class="mapvid-item video">
+                        <video controls>
+                            <source src="media/cc_elott.mp4" type="video/mp4">Your browser does not support playing videos.
+                        </video>
+                    </div>
                 </div>
             </div>
+            </section>
 
         </div>
     </main>
@@ -179,7 +183,7 @@
     <!-- FOOTER -->
     <footer class="footer" id="contact">
         <div clas="footer-left">
-            <img class="logo2" src="media/logo.png">
+            <img class="logo2" src="media/logo.png" alt="logo">
         </div>
         
         <div clas="footer-center">

@@ -1,4 +1,4 @@
-/*Menu icon - ovo ne diraj!*/
+/*Menu icon*/
 function iconTransform(x) {
     x.classList.toggle("change");
 }
@@ -17,7 +17,7 @@ function openNav() {
 }
 
 
-/*Modal image - ovo diraj*/
+/*Modal image*/
 
 // #1
 // Get the modal

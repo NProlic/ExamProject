@@ -8,11 +8,9 @@
 }
 
 @import url('http://fonts.cdnfonts.com/css/hanken');
-@import url('http://fonts.cdnfonts.com/css/alire');
 
 body {
     margin: 0;
-    /*font-family: 'Alire', sans-serif;*/
     font-family: 'Hanken', sans-serif;
     background-color: #fcefe5;
 }
@@ -44,8 +42,9 @@ html {
     z-index: 4;
 }
 
+/* NAVIGATION BAR */
+
 .navbar {
-    /*background-color: #fcefe5;*/
     background-color: rgb(252, 239, 229, 0.95);
     position: fixed;
     top: 0;
@@ -78,54 +77,14 @@ html {
 }
 
 .navframe a {
-    /*font-family: 'Alire', sans-serif;*/
     color: #fcefe5;
     text-align: center;
-    /*display: inline-block;*/
     text-decoration: none;
     margin-top: 23px;
 }
 
 .topnav a:hover {
     color: #fff;
-}
-
-/* Menu icon */
-
-.icon_container {
-    display: inline-block;
-    cursor: pointer;
-    float: right;
-    padding: 15px 10px;
-    display: none;
-}
-
-.bar1,
-.bar2,
-.bar3 {
-    width: 35px;
-    height: 5px;
-    background-color: #fcefe5;
-    margin: 6px 0;
-    transition: 0.2s;
-}
-
-.change .bar1 {
-    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
-    transform: rotate(-45deg) translate(-9px, 6px);
-}
-
-.change .bar2 {
-    opacity: 0;
-}
-
-.change .bar3 {
-    -webkit-transform: rotate(45deg) translate(-8px, -8px);
-    transform: rotate(45deg) translate(-8px, -8px);
-}
-
-.menu_icon {
-    display: none;
 }
 
 .navleft {
@@ -180,6 +139,48 @@ html {
     display: inherit;
 }
 
+/* Menu icon */
+
+.icon_container {
+    display: inline-block;
+    cursor: pointer;
+    float: right;
+    padding: 15px 10px;
+    display: none;
+}
+
+/* Burger menu icon / X icon */
+
+.bar1,
+.bar2,
+.bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #fcefe5;
+    margin: 6px 0;
+    transition: 0.2s;
+}
+
+/* Rotation of icon elements */
+
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.change .bar2 {
+    opacity: 0;
+}
+
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+}
+
+.menu_icon {
+    display: none;
+}
+
 /*MAIN*/
 
 main {
@@ -202,7 +203,6 @@ main {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    
     margin-bottom: 3em;
 }
 
@@ -213,6 +213,8 @@ main {
     padding-bottom: 1em;
     color: #fcefe5;
 }
+
+/* Picture + text section */
 
 .pic-txt {
     overflow: hidden;
@@ -237,6 +239,8 @@ main {
     margin-left: 20px;
     border-radius: 15% 0;
 }
+
+/* For info circles and reviews sections */
 
 .flex-container {
     display: flex;
@@ -363,13 +367,20 @@ main {
 
 /* MAP & VIDEO */
 
+.container {
+    border: 1px dotted #886758;
+    border-radius: 5px;
+}
+
+.container p {
+    margin-left: 2em;
+}
+
 .mapvid-container {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    border: 1px dotted #886758;
-    border-radius: 5px;
 }
 
 .mapvid-item {
@@ -438,6 +449,8 @@ video {
     margin: 0;
 }
 
+/* MEDIA QUERIES */
+
 @media screen and (max-width: 1477px) {
     .mapvid-container {
         flex-direction: column;
@@ -449,7 +462,7 @@ video {
     }
 }
 
-/* Mobile version */
+/* Mobile version of navigation bar */
 @media screen and (max-width: 1200px) {
     .navframe {
         padding-left: 0;
@@ -548,15 +561,18 @@ video {
         font-size: 20px;
     }
     
-    .mapvid-container {
+    .container {
         border: none;
     }
     
+    .container p {
+        margin-left: 0;
+    }
+    
     .mapvid-item video {
-        position: relative;
         width: 90vw;
-        top: 0;
-        left: -17%;
+        margin-left: -30vw;
+        margin-top: 10vw;
     }
     
     #findus {
